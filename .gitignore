@@ -1,0 +1,70 @@
+# Composer dependencies
+/vendor/
+
+# Node modules (if you use frontend tools)
+/node_modules/
+
+# Environment configuration
+.env
+.env.*
+
+# PHPStorm and JetBrains IDE files
+.idea/
+
+# VSCode settings
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime files
+*.log
+*.cache
+*.tmp
+*.swp
+*.bak
+*.swo
+
+# Laravel / Symfony / Other Framework-specific
+/storage/
+bootstrap/cache/
+# Laravel test coverage
+coverage.xml
+.phpunit.result.cache
+
+# PHP Sessions & Cache
+sessions/
+cache/
+*.sess
+
+# Uploaded files (if not versioned)
+uploads/
+files/
+
+# Composer lock file (optional, if you don't want to lock versions)
+# composer.lock
+
+# PHPUnit logs
+.phpunit.cache/
+
+# User-specific IDE files
+*.sublime-workspace
+*.sublime-project
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# Build artifacts
+/public/build/
+public/hot
+/public/mix-manifest.json
+
+# Database files (if any)
+*.sqlite
+*.sqlite3
+
+# Custom local configuration files
+config.local.php
