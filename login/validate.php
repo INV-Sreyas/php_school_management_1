@@ -12,10 +12,10 @@ is not allowed inside sql table*/
 $time = trim(date("h:i:sa", strtotime("+5 minutes")),"a,p,m");
 
 if(($row["attempts"]>=3) && date("h:i:sa")<$time) {
+    $_SESSION['login_error'] = "Error";
     echo "you have reached the invalid login limit, please try again after 5 minutes";
     mysqli_query($dbConnect,"UPDATE login SET blocked_time ='".$time."'
     WHERE username = 'admin'");
-    exit;
 }
 
 if(isset($_POST["username"]) && !empty($_POST["username"])) {
@@ -66,8 +66,12 @@ else{
                 <input name="username" type="text"/> 
             <br>
             <label>Password :</label><br>
-                <input name="password" type="password"/>
-            <button type="submit">login</button>
+                <input name="password" type="password"/> <br>
+            <button type="submit">login</button> <br>
+            <?php
+                    
+                    echo $_SESSION['login_error'] ?? '';
+                   ?>
         </form>
     </body>
 </html>
