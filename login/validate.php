@@ -28,6 +28,7 @@ if(isset($_POST["username"]) && !empty($_POST["username"])) {
                 echo json_encode(["message" => "login successful"]);
                 mysqli_query($dbConnect,"UPDATE login SET attempts = '0'
                 WHERE username = 'admin'");
+                header('Location: ../dashboard.html');
             }
             else {
                 http_response_code(401);
